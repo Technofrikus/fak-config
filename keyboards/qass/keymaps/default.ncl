@@ -14,7 +14,7 @@ let TTTT = tap.trans & hold.trans in
       kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    kc.ENTER,
       kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    kc.BSPC,
       kc.Z,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  kc."/",
-      md.lctl, md.lgui, md.lalt, MO 1,    kc." ",  md.ralt, md.rgui, md.rctl,
+      md.lctl, md.lgui, md.lalt, kc.S,    kc." ",  md.ralt, md.rgui, md.rctl,
     ],
     [
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
