@@ -154,8 +154,8 @@ let keymap = {
     let base = fun key_idx => (alphas layouts.QWERTY) |> std.array.at key_idx in
     [ # layer 0
       base 0, base 1,  base 2,  base 3, base 4, base 5,  base 6,  base 7,  base 8,  base 9,  kc.ENTER,     #0-10
-      base 10,base 11, base 12, base 13,base 14,base 15, base 16, base 17, base 18, base 19, XXXX,         #11-20
-      base 20,base 21, base 22, base 23,base 24,base 25, base 26, base 27, base 28, base 29,  kc."/",      #21-30
+      base 10,base 11, base 12, base 13,base 14,base 15, base 16, base 17, base 18, XXXX,                  #11-20
+      base 20,base 21, base 22, base 23,base 24,base 25, base 26, base 27, base 28  kc."/",                #21-30
       XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                               #31-38
       
       # Combos start here in the same order we defined them above
@@ -166,7 +166,7 @@ let keymap = {
       kc.ESC,
       cu.CUT,
       cu.COPY,
-      cu.PSTE
+      cu.PSTE,
     ],
     [ # layer 1
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
