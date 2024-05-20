@@ -17,13 +17,13 @@ let TTTT = tap.trans & hold.trans in
 # "cu" for custom keys. This is just a name, so it can be whatever you want.
 let cu = {
   # Again, these are just names. They don't have to be 4-letter or capitalized.
-  COPY = md.lgui & kc.C,
-  PSTE = md.lgui & kc.V,
-  CUT =  md.lgui & kc.X,
-  CLOS = md.lgui & kc.Q,
-  VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
-  VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
-  SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
+  COPY = tm.lgui & kc.C,
+  PSTE = tm.lgui & kc.V,
+  CUT =  tm.lgui & kc.X,
+  CLOS = tm.lgui & kc.Q,
+  VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
+  VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
+  SCSH = tm.lctl & kc.E, # Screenshot
   LSTY = md.lsft & kc.Y & hold.reg.behavior, # Left shift hold + Y
   RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
   } in
