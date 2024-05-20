@@ -96,7 +96,7 @@ virtual_keys = virtual_keys',
       kc.ESC,
       cu.CUT,
       cu.COPY,
-      cu.PSTE
+      cu.PSTE,
     ],
     [ # layer 1
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
