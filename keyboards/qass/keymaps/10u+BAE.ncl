@@ -23,7 +23,8 @@ let cu = {
   VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
   VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
-  LSTY = 
+  LSTY = md.lsft & kc.Y & hold.reg.behavior, # Left shift hold + Y
+  RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
