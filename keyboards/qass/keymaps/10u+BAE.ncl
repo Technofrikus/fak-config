@@ -18,10 +18,9 @@ let cu = {
   PSTE = md.lgui & kc.V,
   CUT =  md.lgui & kc.X,
   CLOS = md.lgui & kc.Q,
-  VOLU = md.lalt & md.lsft & me.VOLU #fine grain volume for macOS
-  VOLD = md.lalt & md.lsft & me.VOLD #fine grain volume for macOS
-  # Screenshot
-    SCSH = tap.reg.mod.lctl & kc.E,
+  VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
+  VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
+  SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
