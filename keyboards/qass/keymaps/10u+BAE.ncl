@@ -148,12 +148,11 @@ let layouts = {
 # BA-Enter: M74 = right of P = Enter, M24 = right of L = tap.none, dont use, will also be pressed by the BAE
 # Space: 10u = Split right = M43, Split left = M33
 
-{
-virtual_keys = virtual_keys',
+let keymap = {
+ virtual_keys = virtual_keys',
 
   layers = [
     let base = fun key_idx => (alphas layouts.QWERTY) |> std.array.at key_idx in
-    # ALPHAS
     [ # layer 0
       base 0, base 1,  base 2,  base 3, base 4, base 5,  base 6,  base 7,  base 8,  base 9,  kc.ENTER,     #0-10
       base 10,base 11, base 12, base 13,base 14,base 15, base 16, base 17, base 18, base 19, XXXX,         #11-20
@@ -185,4 +184,6 @@ virtual_keys = virtual_keys',
       TTTT,
     ],
   ],
-}
+} in
+
+keymap
