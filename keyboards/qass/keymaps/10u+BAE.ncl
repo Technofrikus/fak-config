@@ -39,7 +39,7 @@ let cu = {
   # Important: All hold-taps need to have a behavior bound with `hold.reg.behavior`
   let space_td = 
     tap.reg.kc.SPC
-    & hold.reg.layer1
+    & hold.reg.layer 1
     & hold.reg.behavior {
       timeout_ms = 150
       # This will resolve as a hold after 150ms regardless of other keys pressed.
