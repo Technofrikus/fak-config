@@ -1,7 +1,13 @@
 let { tap, hold, td, combo, .. } = import "fak/keycode.ncl" in
 
+# --This Keymap is targeted at macOS---
+
+# We alias commonly used stuff, so we don't end up repeating them over and over.
 let kc = tap.reg.kc in
-let md = tap.reg.mod in
+let ks = tap.reg.ks in
+let md = hold.reg.mod in
+let tm = tap.reg.mod in
+let me = tap.custom.media in
 let MO = hold.reg.layer in
 let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
