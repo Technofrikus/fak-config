@@ -123,7 +123,6 @@ in
 let alphas = fun layout => layout
   |> std.string.characters
   |> util.array.enumerate
-  |> std.array.map (fun { index, value } => kc."%{value}"
 in
 
 
