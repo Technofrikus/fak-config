@@ -9,7 +9,6 @@ let md = hold.reg.mod in
 let tm = tap.reg.mod in
 let me = tap.custom.media in
 let MO = hold.reg.layer in
-
 let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
@@ -24,7 +23,8 @@ let cu = {
   VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
   VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
-  LSTY = 
+  LSTY = md.lsft & kc.Y & hold.reg.behavior, # Left shift hold + Y
+  RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
@@ -45,12 +45,26 @@ let cu = {
       # However, if released before the 150ms is up, it will resolve as a tap.
     }
   in
+  
+# --- Combos ---
+let virtual_keys' = [
+# The first argument is the timeout_ms (up to 255)
+# The second argument is the key indices/positions (min 2, max 9 keys)
+combo.make 35 [17, 18], # Backspace # Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
+combo.make 35 [17, 18, 19], # Backspace word
+combo.make 35 [0, 1], # TAB
+combo.make 35 [11, 12], # ESC
+combo.make 35 [21, 22], # Cut
+combo.make 35 [22, 23], # Copy
+combo.make 35 [23, 24], # Paste
+] in  
+
 
 
 # --- HRM simple version ---
 let key_count = 39 + std.array.length virtual_keys' in
 
-let HRMM_td_behaviour = { #Mod behaviour except shift
+let HRMM_behaviour = { #behaviour for HRM except shift
   timeout_ms = 200,          # Known as tapping term in QMK and ZMK. 200 by default.
   timeout_decision = 'hold,  # Can be set to 'hold (default) or 'tap
   eager_decision = 'tap,     # Can be set to 'hold, 'tap, or 'none (default)
@@ -87,18 +101,7 @@ in
 # Space: 10u = Split right = M43, Split left = M33
 
 {
-virtual_keys = [ #COMBOS
-  # Combo activated by the first and second physical keys
-  # The first argument is the timeout_ms (up to 255)
-  # The second argument is the key indices/positions (min 2, max 9 keys)
-  combo.make 35 [17, 18], # Backspace # Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
-  combo.make 35 [17, 18, 19], # Backspace word
-  combo.make 35 [0, 1], # TAB
-  combo.make 35 [11, 12], # ESC
-  combo.make 35 [21, 22], # Cut
-  combo.make 35 [22, 23], # Copy
-  combo.make 35 [23, 24], # Paste
-],
+virtual_keys = virtual_keys',
 
   layers = [
     [ # layer 0
