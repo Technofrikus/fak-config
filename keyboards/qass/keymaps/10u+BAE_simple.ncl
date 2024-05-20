@@ -23,8 +23,16 @@ let cu = {
   VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
   VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
-  LSTY = md.lsft & kc.Y & hold.reg.behavior, # Left shift hold + Y
+  LSTZ = md.lsft & kc.Z & hold.reg.behavior, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
+  HRMA = md.lsft & kc.A & hold.reg.behaviour, #Home Row Mod A
+  HRMS = md.lctl & kc.S & hold.reg.behaviour, #Home Row Mod A
+  HRMD = md.lalt & kc.D & hold.reg.behaviour, #Home Row Mod A
+  HRMF = md.lgui & kc.F & hold.reg.behaviour, #Home Row Mod A
+  HRMJ = md.rgui & kc.J & hold.reg.behaviour, #Home Row Mod A
+  HRMK = md.ralt & kc.K & hold.reg.behaviour, #Home Row Mod A
+  HRML = md.rctl & kc.L & hold.reg.behaviour, #Home Row Mod A
+  HRMBAE = md.rsft & kc.ENTER & hold.reg.behaviour, #Home Row Mod A
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
@@ -60,35 +68,6 @@ combo.make 35 [23, 24], # Paste
 ] in  
 
 
-
-# --- HRM simple version ---
-let key_count = 39 + std.array.length virtual_keys' in
-
-let HRMM_behaviour = { #behaviour for HRM except shift
-  timeout_ms = 200,          # Known as tapping term in QMK and ZMK. 200 by default.
-  timeout_decision = 'hold,  # Can be set to 'hold (default) or 'tap
-  eager_decision = 'tap,     # Can be set to 'hold, 'tap, or 'none (default)
-  key_interrupts = [         # Size of this must match key count. This assumes we have 5 keys.
-    { decision = 'hold, trigger_on = 'press },      # Similar to ZMK's hold-preferred / QMK's HOLD_ON_OTHER_KEY_PRESS
-    { decision = 'tap, trigger_on = 'press },
-    { decision = 'hold, trigger_on = 'release },    # Similar to ZMK's balanced / QMK's PERMISSIVE_HOLD
-    { decision = 'tap, trigger_on = 'release },
-    { decision = 'none },                           # Similar to ZMK's tap-preferred
-  ],
-  quick_tap_ms = 150,              # 0 (disabled) by default
-  quick_tap_interrupt_ms = 500,    # 0 (disabled) by default
-  global_quick_tap_ms = 120,       # 0 (disabled) by default
-  global_quick_tap_ignore_consecutive = true,     # false by default
-} in
-
-# Behaviors are bound to hold-taps like so
-let my_crazy_key =
-  tap.reg.kc.A
-  & hold.reg.layer 1
-  & hold.reg.behavior my_crazy_behavior
-in
-
-
 # --- Actual keymap ----
 
 # Keymap definition for use with BAE and 10u space
@@ -105,10 +84,10 @@ virtual_keys = virtual_keys',
 
   layers = [
     [ # layer 0
-      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    kc.ENTER,  #0-10
-      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    XXXX,               #11-20
-      kc.Z,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  kc."/",             #21-30
-      XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                 #31-38
+      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    cu.HRMBAE,  #0-10
+      cu.HRMA, cu.HRMS, cu.HRMD, cu.HRMF, kc.G,    kc.H, cu.HRMJ, cu.HRMK,  cu.HRML,    XXXX,               #11-20
+      cu.LSTZ, kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,             #21-30
+      XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                #31-38
       
       # Combos start here in the same order we defined them above
       kc.BSPC, #JK
