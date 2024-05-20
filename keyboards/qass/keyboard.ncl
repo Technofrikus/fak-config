@@ -9,8 +9,8 @@ let { CH552T, .. } = import "fak/mcus.ncl" in
   },
   usb_dev = {
     vendor_id = 0x6D62, # Moinboards ID
-    product_id = 455,  # ASS
-    product_ver = 1, # 0x0001
+    product_id = 0x0455,  # ASS
+    product_ver = 1.0, # 0x0100
   },
   keys =
     let M = ColToRowKey in
