@@ -120,6 +120,17 @@ let htb_hrm_right = fun eager => htb_hrm_base eager & {
     {}
 in
 
+let alphas = fun layout => layout
+  |> std.string.characters
+  |> util.array.enumerate
+  |> std.array.map (fun { index, value } => kc."%{value}"
+      & (if index == 0 then
+          MO 2 & hold.reg.behavior htb_media
+        else 
+          make_hrm index)
+    )
+in
+
 
 # --- Actual keymap ----
 
