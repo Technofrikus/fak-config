@@ -150,8 +150,7 @@ let layouts = {
 
 let keymap = {
  virtual_keys = virtual_keys',
-
-  layers = [
+ layers = [
     let base = fun key_idx => (alphas layouts.QWERTY) |> std.array.at key_idx in
     [ # layer 0
       base 0, base 1,  base 2,  base 3, base 4, base 5,  base 6,  base 7,  base 8,  base 9,  kc.ENTER,     #0-10
