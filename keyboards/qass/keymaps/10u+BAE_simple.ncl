@@ -25,14 +25,14 @@ let cu = {
   SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
   LSTZ = md.lsft & kc.Z & hold.reg.behavior, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
-  HRMA = md.lsft & kc.A & hold.reg.behaviour, #Home Row Mod A
-  HRMS = md.lctl & kc.S & hold.reg.behaviour, #Home Row Mod A
-  HRMD = md.lalt & kc.D & hold.reg.behaviour, #Home Row Mod A
-  HRMF = md.lgui & kc.F & hold.reg.behaviour, #Home Row Mod A
-  HRMJ = md.rgui & kc.J & hold.reg.behaviour, #Home Row Mod A
-  HRMK = md.ralt & kc.K & hold.reg.behaviour, #Home Row Mod A
-  HRML = md.rctl & kc.L & hold.reg.behaviour, #Home Row Mod A
-  HRMBAE = md.rsft & kc.ENTER & hold.reg.behaviour, #Home Row Mod A
+  HRMA = md.lsft & kc.A & hold.reg.behaviour{}, #Home Row Mod A
+  HRMS = md.lctl & kc.S & hold.reg.behaviour{}, #Home Row Mod A
+  HRMD = md.lalt & kc.D & hold.reg.behaviour{}, #Home Row Mod A
+  HRMF = md.lgui & kc.F & hold.reg.behaviour{}, #Home Row Mod A
+  HRMJ = md.rgui & kc.J & hold.reg.behaviour{}, #Home Row Mod A
+  HRMK = md.ralt & kc.K & hold.reg.behaviour{}, #Home Row Mod A
+  HRML = md.rctl & kc.L & hold.reg.behaviour{}, #Home Row Mod A
+  HRMBAE = md.rsft & kc.ENTER & hold.reg.behaviour{}, #Home Row Mod A
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
