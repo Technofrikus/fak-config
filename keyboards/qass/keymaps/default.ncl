@@ -7,7 +7,14 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
-# Keymap definition
+# Keymap definition for testing and very basic use
+# Because of the little available pins of the Miao the matrix is not straight forward at all
+# With a QWERTY layout in mind:
+# ISO-Enter: M74 = Enter = right of P, M24 = key right of L is also available
+# Long Shift: M14 = right most key = Shift (also in short shift), M34 = key below L is unavailble with Long Shift
+# ANSI-Enter: M74 = right of P = Backspace, M24 = right of L = Enter
+# BA-Enter: M74 = right of P = Enter, M24 = right of L = tap.none, dont use, will also be pressed by the BAE
+# Space: 10u = Split right = M43, Split left = M33
 {
   layers = [
     [
