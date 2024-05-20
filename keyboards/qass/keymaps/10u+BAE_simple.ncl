@@ -23,16 +23,7 @@ let cu = {
   VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
   VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tap.reg.mod.lctl & kc.E, # Screenshot
-  LSTZ = md.lsft & kc.Z & hold.reg.behavior{}, # Left shift hold + Z
-  RST- = md.rsft & kc.SLSH & hold.reg.behavior{}, # Right shift hold + slash
-  HRMA = md.lsft & kc.A & hold.reg.behavior{}, #Home Row Mod A
-  HRMS = md.lctl & kc.S & hold.reg.behavior{}, #Home Row Mod A
-  HRMD = md.lalt & kc.D & hold.reg.behavior{}, #Home Row Mod A
-  HRMF = md.lgui & kc.F & hold.reg.behavior{}, #Home Row Mod A
-  HRMJ = md.rgui & kc.J & hold.reg.behavior{}, #Home Row Mod A
-  HRMK = md.ralt & kc.K & hold.reg.behavior{}, #Home Row Mod A
-  HRML = md.rctl & kc.L & hold.reg.behavior{}, #Home Row Mod A
-  HRMBAE = md.rsft & kc.ENTER & hold.reg.behavior{}, #Home Row Mod A
+
   } in
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
