@@ -16,12 +16,12 @@ let TTTT = tap.trans & hold.trans in
 # "cu" for custom keys. This is just a name, so it can be whatever you want.
 let cu = {
   # Again, these are just names. They don't have to be 4-letter or capitalized.
-  COPY = md.lgui & kc.C,
-  PSTE = md.lgui & kc.V,
-  CUT =  md.lgui & kc.X,
-  CLOS = md.lgui & kc.Q,
-  VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
-  VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
+  COPY = tm.lgui & kc.C,
+  PSTE = tm.lgui & kc.V,
+  CUT =  tm.lgui & kc.X,
+  CLOS = tm.lgui & kc.Q,
+  VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
+  VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tm.lctl & kc.E, # Screenshot
   } in
   
@@ -48,7 +48,7 @@ let cu = {
   let virtual_keys' = [
   # The first argument is the timeout_ms (up to 255)
   # The second argument is the key indices/positions (min 2, max 9 keys)
-  combo.make 35 [17, 18], # Backspace # Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
+  combo.make 35 [17, 18], # Backspace, Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
   combo.make 35 [17, 18, 19], # Backspace word
   combo.make 35 [0, 1], # TAB
   combo.make 35 [11, 12], # ESC
