@@ -120,12 +120,6 @@ let htb_hrm_right = fun eager => htb_hrm_base eager & {
     {}
 in
 
-let alphas = fun layout => layout
-  |> std.string.characters
-  |> util.array.enumerate
-  |> std.array.map (fun { index, value } => kc."%{value}")
-in
-
 
 # --- Actual keymap ----
 
