@@ -153,7 +153,7 @@ virtual_keys = virtual_keys',
       
       # Combos start here in the same order we defined them above
       kc.BSPC, #JK
-      md.lalt & kc.BSPC, #JKL
+      tm.lalt & kc.BSPC, #JKL
       kc.TAB,
       kc.ESC,
       cu.CUT,
