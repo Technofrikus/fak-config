@@ -24,6 +24,13 @@ let cu = {
   VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tm.lctl & kc.E, # Screenshot
   } in
+  
+  # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
+  let play_td = td.make 200 [
+  me.PLAY,
+  me.NEXT,
+  me.PREV,
+  ] in
 
 # Keymap definition
 {
