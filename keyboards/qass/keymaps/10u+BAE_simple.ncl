@@ -43,6 +43,19 @@ let cu = {
     # However, if released before the 150ms is up, it will resolve as a tap.
   }
   in
+
+# --- Combos ---
+  let virtual_keys' = [
+  # The first argument is the timeout_ms (up to 255)
+  # The second argument is the key indices/positions (min 2, max 9 keys)
+  combo.make 35 [17, 18], # Backspace # Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
+  combo.make 35 [17, 18, 19], # Backspace word
+  combo.make 35 [0, 1], # TAB
+  combo.make 35 [11, 12], # ESC
+  combo.make 35 [21, 22], # Cut
+  combo.make 35 [22, 23], # Copy
+  combo.make 35 [23, 24], # Paste
+  ] in  
   
 
 # Keymap definition
