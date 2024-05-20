@@ -60,6 +60,7 @@ let cu = {
 
 # Keymap definition
 {
+virtual_keys = virtual_keys',
   layers = [
     [
       kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    kc.ENTER,
