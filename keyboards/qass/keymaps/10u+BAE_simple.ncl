@@ -75,8 +75,8 @@ virtual_keys = virtual_keys',
 
   layers = [
     [ # layer 0
-      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    cu.HRMBAE,  #0-10
-      cu.HRMA, cu.HRMS, cu.HRMD, cu.HRMF, kc.G,    kc.H, cu.HRMJ, cu.HRMK,  cu.HRML,    XXXX,               #11-20
+      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    kc.ENTER,  #0-10
+      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    XXXX,               #11-20
       cu.LSTZ, kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,             #21-30
       XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                #31-38
       
