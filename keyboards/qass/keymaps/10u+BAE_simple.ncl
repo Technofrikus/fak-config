@@ -13,6 +13,18 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
+# "cu" for custom keys. This is just a name, so it can be whatever you want.
+let cu = {
+  # Again, these are just names. They don't have to be 4-letter or capitalized.
+  COPY = md.lgui & kc.C,
+  PSTE = md.lgui & kc.V,
+  CUT =  md.lgui & kc.X,
+  CLOS = md.lgui & kc.Q,
+  VOLU = md.lalt & md.lsft & me.VOLU, #fine grain volume for macOS
+  VOLD = md.lalt & md.lsft & me.VOLD, #fine grain volume for macOS
+  SCSH = tm.lctl & kc.E, # Screenshot
+  } in
+
 # Keymap definition
 {
   layers = [
