@@ -91,7 +91,7 @@ virtual_keys = virtual_keys',
     ],
     [ # layer 1
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
-      md.lgui, md.lalt, md.lctl, md.lsft, XXXX,    XXXX,    kc.N4,   kc.N5,   kc.N6,   XXXX,
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N4,   kc.N5,   kc.N6,   XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N0,   kc.N1,   kc.N2,   kc.N3,   XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
       TTTT,
