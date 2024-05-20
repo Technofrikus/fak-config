@@ -67,12 +67,28 @@ virtual_keys = virtual_keys',
       kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    kc.BSPC,
       kc.Z,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  kc."/",
       md.lctl, md.lgui, md.lalt, MO 1,    kc." ",  md.ralt, md.rgui, md.rctl,
+      
+      # Combos start here in the same order we defined them above
+      kc.BSPC, #JK
+      md.lalt & kc.BSPC, #JKL
+      kc.TAB,
+      kc.ESC,
+      cu.CUT,
+      cu.COPY,
+      cu.PSTE,
     ],
     [
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
       md.lgui, md.lalt, md.lctl, md.lsft, XXXX,    XXXX,    kc.N4,   kc.N5,   kc.N6,   XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N0,   kc.N1,   kc.N2,   kc.N3,   XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
+      TTTT,
+      TTTT,
+      TTTT,
+      TTTT,
+      TTTT,
+      TTTT,
+      TTTT,
     ],
   ],
 }
