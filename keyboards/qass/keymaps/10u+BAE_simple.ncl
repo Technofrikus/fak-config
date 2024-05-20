@@ -31,6 +31,19 @@ let cu = {
   me.NEXT,
   me.PREV,
   ] in
+  
+  # The following keycode is a hold-tap, since it has a tap and a hold portion
+  # Important: All hold-taps need to have a behavior bound with `hold.reg.behavior`
+  let space_td = 
+  tap.reg.kc.SPC
+  & hold.reg.layer 1
+  & hold.reg.behavior {
+    timeout_ms = 150
+    # This will resolve as a hold after 150ms regardless of other keys pressed.
+    # However, if released before the 150ms is up, it will resolve as a tap.
+  }
+  in
+  
 
 # Keymap definition
 {
