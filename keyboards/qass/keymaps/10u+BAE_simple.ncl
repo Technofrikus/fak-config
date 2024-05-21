@@ -22,6 +22,8 @@ let ki = {
   xx = { decision = 'none },
 } in
 
+let virtual_key_count = std.array.length virtual_keys' in
+let key_count = 39 + virtual_key_count in
 let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
 
 # define HomeRowMod behavior, more details here: https://github.com/semickolon/fak/?tab=readme-ov-file#complex-hold-tap-behaviors
