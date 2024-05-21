@@ -105,6 +105,7 @@ virtual_keys = virtual_keys',
       TTTT,
       TTTT,
       TTTT,
+      TTTT,
     ],
   ],
 }
