@@ -13,6 +13,50 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
+# define short aliases for the different hold-tap-behaviors
+let ki = {
+  hp = { decision = 'hold, trigger_on = 'press },
+  tp = { decision = 'tap, trigger_on = 'press },
+  hr = { decision = 'hold, trigger_on = 'release },
+  tr = { decision = 'tap, trigger_on = 'release },
+  xx = { decision = 'none },
+} in
+
+let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
+
+# define HomeRowMod behavior, more details here: https://github.com/semickolon/fak/?tab=readme-ov-file#complex-hold-tap-behaviors
+# left and right behavior defined sepirately so we have positional hold-tap so we dont have misfires when rolling two keys
+let hrm_left = { 
+  timeout_ms = 150,          # Known as tapping term in QMK and ZMK. 200 by default.
+  # quick_tap_ms = 100,
+  # quick_tap_interrupt_ms = 500,
+  # global_quick_tap_ms = 80,
+  timeout_decision = 'hold,
+  # key interrupts defining what the key with this behavior does when pressed together with the key in this "keymap"
+  key_interrupts = [     
+    ki.tp, ki.tp, ki.tp, ki.tp, ki.tp,      ki.hr, ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,        #0-10
+    ki.tr, ki.tr, ki.tr, ki.tr, ki.tp,      ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,               #11-20
+    ki.tp, ki.tp, ki.tp, ki.tp, ki.tp,      ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,               #21-30
+           ki.hr, ki.hr, ki.hr, ki.hr,      ki.hr, ki.hr, ki.hr, ki.hr,                      #31-38
+  ] @ virtual_interrupts
+} in
+
+let hrm_right = { 
+  timeout_ms = 150,          # Known as tapping term in QMK and ZMK. 200 by default.
+  # quick_tap_ms = 100,
+  # quick_tap_interrupt_ms = 500,
+  # global_quick_tap_ms = 80,
+  timeout_decision = 'hold,
+  # key interrupts defining what the key with this behavior does when pressed together with the key in this "keymap"
+  key_interrupts = [     
+    ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,      ki.tp, ki.tp, ki.tp, ki.tp, ki.tp, ki.tp,        #0-10
+    ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,      ki.tp, ki.tr, ki.tr, ki.tr, ki.tr,               #11-20
+    ki.hr, ki.hr, ki.hr, ki.hr, ki.hr,      ki.tp, ki.tp, ki.tp, ki.tp, ki.tp,               #21-30
+           ki.hr, ki.hr, ki.hr, ki.hr,      ki.hr, ki.hr, ki.hr, ki.hr,                      #31-38
+  ] @ virtual_interrupts
+} in
+
+
 # "cu" for custom keys. This is just a name, so it can be whatever you want.
 let cu = {
   # Again, these are just names. They don't have to be 4-letter or capitalized.
@@ -37,15 +81,15 @@ let cu = {
  K = md.ralt & kc.K & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
  L = md.rctl & kc.L & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
  BAE = md.rsft & kc.ENTER & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- } in 
+ } in  
   
-  # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
+  # Tapdance for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
   let play_td = td.make 200 [
-  me.PLAY,
-  me.NEXT,
-  me.PREV,
+    me.PLAY,
+    me.NEXT,
+    me.PREV,
   ] in
-  
+
   # The following keycode is a hold-tap, since it has a tap and a hold portion
   # Important: All hold-taps need to have a behavior bound with `hold.reg.behavior`
   let space_td = 
