@@ -13,6 +13,20 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
+# "cu" for custom keys. This is just a name, so it can be whatever you want.
+let cu = {
+  # Again, these are just names. They don't have to be 4-letter or capitalized.
+  COPY = tm.lgui & kc.C,
+  PSTE = tm.lgui & kc.V,
+  CUT =  tm.lgui & kc.X,
+  CLOS = tm.lgui & kc.Q,
+  VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
+  VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
+  SCSH = tm.lctl & kc.E, # Screenshot
+  LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
+  RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
+  } in
+
 # --- Combos ---
 # Key position for the combos
   let virtual_keys' = [
@@ -85,21 +99,6 @@ let hrm_right = {
            ki.hr, ki.hr, ki.hr, ki.hr,      ki.hr, ki.hr, ki.hr, ki.hr,                      #31-38
   ] @ virtual_interrupts
 } in
-
-
-# "cu" for custom keys. This is just a name, so it can be whatever you want.
-let cu = {
-  # Again, these are just names. They don't have to be 4-letter or capitalized.
-  COPY = tm.lgui & kc.C,
-  PSTE = tm.lgui & kc.V,
-  CUT =  tm.lgui & kc.X,
-  CLOS = tm.lgui & kc.Q,
-  VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
-  VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
-  SCSH = tm.lctl & kc.E, # Screenshot
-  LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
-  RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
-  } in
   
  # HomeRowMods
  let hrm = {
