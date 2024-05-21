@@ -29,14 +29,14 @@ let cu = {
   
  # HomeRowMods
  let hrm = {
- A = md.lsft & kc.A & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- S = md.lctl & kc.S & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- D = md.lalt & kc.D & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- F = md.lgui & kc.F & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- J = md.rgui & kc.J & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- K = md.ralt & kc.K & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- L = md.rctl & kc.L & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
- BAE = md.rsft & kc.ENTER & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ A = md.lsft & kc.A & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ S = md.lctl & kc.S & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ D = md.lalt & kc.D & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ F = md.lgui & kc.F & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ J = md.rgui & kc.J & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ K = md.ralt & kc.K & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ L = md.rctl & kc.L & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ BAE = md.rsft & kc.ENTER & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
  } in 
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
