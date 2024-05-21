@@ -13,6 +13,34 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
+# --- Combos ---
+# Key position for the combos
+  let virtual_keys' = [
+  # The first argument is the timeout_ms (up to 255)
+  # The second argument is the key indices/positions (min 2, max 9 keys)
+  combo.make 35 [17, 18],       # Backspace, Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
+  combo.make 35 [17, 18, 19],   # Backspace word
+  combo.make 35 [18, 19],       # Delete
+  combo.make 35 [0, 1],         # TAB
+  combo.make 35 [11, 12],       # ESC
+  combo.make 35 [21, 22],       # Cut
+  combo.make 35 [22, 23],       # Copy
+  combo.make 35 [23, 24],       # Paste
+  ] in  
+  
+# keymap for the combos, same order as above
+let combos = [
+      kc.BSPC, #JK
+      tm.lalt & kc.BSPC, #JKL - not yet working in FAK
+      kc.DEL,  #KL
+      kc.TAB,  #QW
+      kc.ESC,  #AS
+      cu.CUT,  #YX
+      cu.COPY, #XC
+      cu.PSTE, #CV
+  ] in
+  
+
 # define short aliases for the different hold-tap-behaviors
 let ki = {
   hp = { decision = 'hold, trigger_on = 'press },
@@ -103,34 +131,6 @@ let cu = {
     # However, if released before the 150ms is up, it will resolve as a tap.
   }
   in
-
-# --- Combos ---
-# Key position for the combos
-  let virtual_keys' = [
-  # The first argument is the timeout_ms (up to 255)
-  # The second argument is the key indices/positions (min 2, max 9 keys)
-  combo.make 35 [17, 18],       # Backspace, Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
-  combo.make 35 [17, 18, 19],   # Backspace word
-  combo.make 35 [18, 19],       # Delete
-  combo.make 35 [0, 1],         # TAB
-  combo.make 35 [11, 12],       # ESC
-  combo.make 35 [21, 22],       # Cut
-  combo.make 35 [22, 23],       # Copy
-  combo.make 35 [23, 24],       # Paste
-  ] in  
-  
-# keymap for the combos, same order as above
-let combos = [
-      kc.BSPC, #JK
-      tm.lalt & kc.BSPC, #JKL - not yet working in FAK
-      kc.DEL,  #KL
-      kc.TAB,  #QW
-      kc.ESC,  #AS
-      cu.CUT,  #YX
-      cu.COPY, #XC
-      cu.PSTE, #CV
-  ] in
-  
 
 # Keymap definition
 {
