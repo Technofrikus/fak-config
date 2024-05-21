@@ -62,13 +62,14 @@ let cu = {
   let virtual_keys' = [
   # The first argument is the timeout_ms (up to 255)
   # The second argument is the key indices/positions (min 2, max 9 keys)
-  combo.make 35 [17, 18], # Backspace, Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
-  combo.make 35 [17, 18, 19], # Backspace word
-  combo.make 35 [0, 1], # TAB
-  combo.make 35 [11, 12], # ESC
-  combo.make 35 [21, 22], # Cut
-  combo.make 35 [22, 23], # Copy
-  combo.make 35 [23, 24], # Paste
+  combo.make 35 [17, 18],       # Backspace, Combo activated by the 18th and 19th (j + k on qwerty) physical keys, start counting at 0
+  combo.make 35 [17, 18, 19],   # Backspace word
+  combo.make 35 [18, 19],       # Delete
+  combo.make 35 [0, 1],         # TAB
+  combo.make 35 [11, 12],       # ESC
+  combo.make 35 [21, 22],       # Cut
+  combo.make 35 [22, 23],       # Copy
+  combo.make 35 [23, 24],       # Paste
   ] in  
   
 
@@ -77,19 +78,20 @@ let cu = {
 virtual_keys = virtual_keys',
   layers = [
     [
-      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    kc.ENTER,
-      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    kc.BSPC,
-      kc.Z,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  kc."/",
-      md.lctl, md.lgui, md.lalt, MO 1,    kc." ",  md.ralt, md.rgui, md.rctl,
+      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    hrm.BAE,        #0-10
+      hrm.A,    hrm.S,    hrm.D,    hrm.F,    kc.G,    kc.H,    hrm.J,    hrm.K,    hrm.L,    XXXX,             #11-20
+      cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
+      XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                    #31-38
       
       # Combos start here in the same order we defined them above
       kc.BSPC, #JK
-      tm.lalt & kc.BSPC, #JKL
-      kc.TAB,
-      kc.ESC,
-      cu.CUT,
-      cu.COPY,
-      cu.PSTE,
+      tm.lalt & kc.BSPC, #JKL - not yet working in FAK
+      kc.DEL,  #KL
+      kc.TAB,  #QW
+      kc.ESC,  #AS
+      cu.CUT,  #YX
+      cu.COPY, #XC
+      cu.PSTE, #CV
     ],
     [
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,

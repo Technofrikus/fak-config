@@ -3,6 +3,8 @@ let util = import "fak/util_functions.ncl" in
 
 # --This Keymap is targeted at macOS---
 
+###NOT WORKING AT THE MOMENT#####
+
 # We alias commonly used stuff, so we don't end up repeating them over and over.
 let kc = tap.reg.kc in
 let ks = tap.reg.ks in

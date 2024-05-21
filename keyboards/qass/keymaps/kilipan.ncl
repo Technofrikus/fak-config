@@ -1,6 +1,8 @@
 let { tap, hold, td, combo, macro, ..} = import "fak/keycode.ncl" in
 let util = import "fak/util_functions.ncl" in
 
+###NOT WORKING AT THE MOMENT#####
+
 let virtual_keys' = [
   # alpha
   combo.make 25 [1, 2], # V
