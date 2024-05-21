@@ -59,6 +59,7 @@ let cu = {
   in
 
 # --- Combos ---
+# Key position for the combos
   let virtual_keys' = [
   # The first argument is the timeout_ms (up to 255)
   # The second argument is the key indices/positions (min 2, max 9 keys)
@@ -72,6 +73,18 @@ let cu = {
   combo.make 35 [23, 24],       # Paste
   ] in  
   
+# keymap for the combos, same order as above
+let combos = [
+      kc.BSPC, #JK
+      tm.lalt & kc.BSPC, #JKL - not yet working in FAK
+      kc.DEL,  #KL
+      kc.TAB,  #QW
+      kc.ESC,  #AS
+      cu.CUT,  #YX
+      cu.COPY, #XC
+      cu.PSTE, #CV
+  ] in
+  
 
 # Keymap definition
 {
@@ -82,30 +95,12 @@ virtual_keys = virtual_keys',
       hrm.A,    hrm.S,    hrm.D,    hrm.F,    kc.G,    kc.H,    hrm.J,    hrm.K,    hrm.L,    XXXX,             #11-20
       cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
       XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                    #31-38
-      
-      # Combos start here in the same order we defined them above
-      kc.BSPC, #JK
-      tm.lalt & kc.BSPC, #JKL - not yet working in FAK
-      kc.DEL,  #KL
-      kc.TAB,  #QW
-      kc.ESC,  #AS
-      cu.CUT,  #YX
-      cu.COPY, #XC
-      cu.PSTE, #CV
-    ],
+    ] @ combos,
     [
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
       md.lgui, md.lalt, md.lctl, md.lsft, XXXX,    XXXX,    kc.N4,   kc.N5,   kc.N6,   XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N0,   kc.N1,   kc.N2,   kc.N3,   XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
-      TTTT,
-      TTTT,
-      TTTT,
-      TTTT,
-      TTTT,
-      TTTT,
-      TTTT,
-      TTTT,
-    ],
+    ] @ combos,
   ],
 }
