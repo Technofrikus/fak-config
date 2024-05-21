@@ -23,20 +23,20 @@ let cu = {
   VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
   VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tm.lctl & kc.E, # Screenshot
-  LSTZ = md.lsft & kc.Z & hold.reg.behavior, # Left shift hold + Z
-  RST- = md.rsft & kc.SLSH & hold.reg.behavior, # Right shift hold + slash
+  LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
+  RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
   } in
   
  # HomeRowMods
  let hrm = {
- A = md.lsft & kc.A & hold.reg.behaviour, #Home Row Mod A
- S = md.lctl & kc.S & hold.reg.behaviour, #Home Row Mod A
- D = md.lalt & kc.D & hold.reg.behaviour, #Home Row Mod A
- F = md.lgui & kc.F & hold.reg.behaviour, #Home Row Mod A
- J = md.rgui & kc.J & hold.reg.behaviour, #Home Row Mod A
- K = md.ralt & kc.K & hold.reg.behaviour, #Home Row Mod A
- L = md.rctl & kc.L & hold.reg.behaviour, #Home Row Mod A
- BAE = md.rsft & kc.ENTER & hold.reg.behaviour, #Home Row Mod A
+ A = md.lsft & kc.A & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ S = md.lctl & kc.S & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ D = md.lalt & kc.D & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ F = md.lgui & kc.F & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ J = md.rgui & kc.J & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ K = md.ralt & kc.K & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ L = md.rctl & kc.L & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
+ BAE = md.rsft & kc.ENTER & hold.reg.behaviour{timeout_ms = 300}, #Home Row Mod A
  } in 
   
   # 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
