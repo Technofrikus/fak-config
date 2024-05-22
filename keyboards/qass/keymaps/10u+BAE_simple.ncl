@@ -102,14 +102,14 @@ let hrm_right = {
   
  # HomeRowMods
  let hrm = {
- A = md.lsft & kc.A & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- S = md.lctl & kc.S & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- D = md.lalt & kc.D & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- F = md.lgui & kc.F & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- J = md.rgui & kc.J & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- K = md.ralt & kc.K & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- L = md.rctl & kc.L & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
- BAE = md.rsft & kc.ENTER & hold.reg.behavior{timeout_ms = 300}, #Home Row Mod A
+ A = md.lsft & kc.A & hold.reg.behavior hrm_left, #Home Row Mod A
+ S = md.lctl & kc.S & hold.reg.behavior hrm_left, #Home Row Mod A
+ D = md.lalt & kc.D & hold.reg.behavior hrm_left, #Home Row Mod A
+ F = md.lgui & kc.F & hold.reg.behavior hrm_left, #Home Row Mod A
+ J = md.rgui & kc.J & hold.reg.behavior hrm_right, #Home Row Mod A
+ K = md.ralt & kc.K & hold.reg.behavior hrm_right, #Home Row Mod A
+ L = md.rctl & kc.L & hold.reg.behavior hrm_right, #Home Row Mod A
+ BAE = md.rsft & kc.ENTER & hold.reg.behavior hrm_right, #Home Row Mod A
  } in  
   
   # Tapdance for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
