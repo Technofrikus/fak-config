@@ -149,7 +149,7 @@ virtual_keys = virtual_keys',
       XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,
     ] @ combos,
    [ # layer 2
-      BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.LEFT & kc.lalt,kc.UP,kc.RIGHT & kc.lalt,   XXXX,    XXXX,
+      BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.LEFT & tm.lalt,kc.UP,kc.RIGHT & tm.lalt,   XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.LEFT, kc.DOWN, kc.RIGHT, TTTT,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
