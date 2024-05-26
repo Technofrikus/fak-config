@@ -110,7 +110,7 @@ let hrm_right = {
  J = md.rgui & kc.J & hold.reg.behavior hrm_right, #Home Row Mod A
  K = md.ralt & kc.K & hold.reg.behavior hrm_right, #Home Row Mod A
  L = md.rctl & kc.L & hold.reg.behavior hrm_right, #Home Row Mod A
- BAE = MO.layer 2 & kc.ENTER & hold.reg.behavior hrm_right, #Home Row Mod A
+ BAE = MO 2 & kc.ENTER & hold.reg.behavior hrm_right, #Home Row Mod A
  } in  
   
   # Tapdance for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
