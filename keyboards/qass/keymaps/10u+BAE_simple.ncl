@@ -25,6 +25,7 @@ let cu = {
   SCSH = tm.lctl & kc.E, # Screenshot
   LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
+  HHHH = kc.H & md.lgui & hold.reg.kc.H & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
   } in
 
 # --- Combos ---
@@ -109,7 +110,7 @@ let hrm_right = {
  J = md.rgui & kc.J & hold.reg.behavior hrm_right, #Home Row Mod A
  K = md.ralt & kc.K & hold.reg.behavior hrm_right, #Home Row Mod A
  L = md.rctl & kc.L & hold.reg.behavior hrm_right, #Home Row Mod A
- BAE = md.rsft & kc.ENTER & hold.reg.behavior hrm_right, #Home Row Mod A
+ BAE = MO.layer 2 & kc.ENTER & hold.reg.behavior hrm_right, #Home Row Mod A
  } in  
   
   # Tapdance for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
@@ -135,16 +136,22 @@ let hrm_right = {
 {
 virtual_keys = virtual_keys',
   layers = [
-    [
-      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,    hrm.BAE,        #0-10
-      hrm.A,    hrm.S,    hrm.D,    hrm.F,    kc.G,    kc.H,    hrm.J,    hrm.K,    hrm.L,    XXXX,             #11-20
+    [ # layer 0
+      kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,   XXXX,            #0-10
+      hrm.A,    hrm.S,    hrm.D,    hrm.F,    kc.G,    kc.H,    hrm.J,    hrm.K,    hrm.L,    hrm.BAE,          #11-20
       cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
       XXXX,    XXXX,    XXXX,    XXXX,    space_td,  XXXX,    XXXX,    XXXX,                                    #31-38
     ] @ combos,
-    [
-      BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N7,   kc.N8,   kc.N9,   XXXX,    kc.ENTER,
-      md.lgui, md.lalt, md.lctl, md.lsft, XXXX,    XXXX,    kc.N4,   kc.N5,   kc.N6,   XXXX,
-      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.N0,   kc.N1,   kc.N2,   kc.N3,   XXXX,
+    [ # layer 1
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.KP_PLUS,    kc.KP_MINUS,   kc.KP_ASTERISK, kc.KP_SLASH,   XXXX,    XXXX,
+      kc.N1,  kc.N2,   kc.N3,   kc.N4,   kc.N5,   kc.N6,    kc.N7,   kc.N8,   kc.N9,   kc.N0,
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,
+    ] @ combos,
+   [ # layer 2
+      BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.left & kc.lalt,kc.up,kc.right & kc.lalt,   XXXX,    XXXX,
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.left, kc.down, kc.right, TTTT,
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
   ],
