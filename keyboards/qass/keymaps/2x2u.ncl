@@ -101,24 +101,24 @@ virtual_keys = virtual_keys',
       kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,   XXXX,            #0-10
       kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    cu.BAE,                  #11-20
       cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
-      md.lctl,    md.lalt,    md.lgui,    MO 3,    space_td,  md.rgui,    md.ralt,    md.rctl                 #31-38
+      md.lctl,    md.lalt,    md.lgui,    MO 3,    space_td,  kc.LEFT,    kc.DOWN,   kc.RIGHT                 #31-38
     ] @ combos,
-    [ # layer 1
+    [ # layer 1 #Space
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.KP_PLUS,kc.KP_MINUS,kc.KP_ASTERISK,kc.KP_SLASH,kc.EQUAL,XXXX,
       kc.N1,  kc.N2,   kc.N3,   kc.N4,   kc.N5,   kc.N6,    kc.N7,   kc.N8,   kc.N9,   kc.N0,
-      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
-      XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,
+      TTTT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    play_td,    cu.VOLD,    cu.VOLU,
     ] @ combos,
    [ # layer 2
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.LEFT & tm.lalt,kc.UP,kc.RIGHT & tm.lalt,   XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.LEFT, kc.DOWN, kc.RIGHT, TTTT,
-      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
+      TTTT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
    [ # layer 3 #Symbols
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX, XXXX,
-      XXXX,    XXXX,    XXXX,    cu.EXLM,    XXXX,    XXXX,    cu.QUES,    XXXX,    XXXX,    XXXX,
-      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
+      XXXX,    XXXX,    XXXX,    cu.QUES,    XXXX,    XXXX,    cu.EXLM,    XXXX,    XXXX,    XXXX,
+      TTTT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
   ],
