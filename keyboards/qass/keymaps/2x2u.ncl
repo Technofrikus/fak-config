@@ -28,6 +28,8 @@ let cu = {
  # cmdh = kc.H & tm.lgui, # Macro for HHHH
  # HHHH = kc.H & hold.reg.cu.cmdh & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
   BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 300},
+  QUES = tm.lsft & kc.N1, # ?
+  EXLM = tm.lsft & kn.MINS, # !
   } in
 
 # --- Combos ---
@@ -78,9 +80,6 @@ let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
     me.PREV,
   ] in
   
-  let HHHH_td = td.make 140 [
-    tap.reg.kc.H & hold.reg.mod.lgui & hold.reg.kc.H, #not sure this will work
-  ] in
 
   # The following keycode is a hold-tap, since it has a tap and a hold portion
   # Important: All hold-taps need to have a behavior bound with `hold.reg.behavior`
@@ -100,9 +99,9 @@ virtual_keys = virtual_keys',
   layers = [
     [ # layer 0
       kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,   XXXX,            #0-10
-      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    HHHH_td,    kc.J,    kc.K,    kc.L,    cu.BAE,                  #11-20
+      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    kc.H,    kc.J,    kc.K,    kc.L,    cu.BAE,                  #11-20
       cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
-      md.lctl,    md.lalt,    md.lgui,    MO 2,    space_td,  md.rgui,    md.ralt,    md.rctl                 #31-38
+      md.lctl,    md.lalt,    md.lgui,    MO 3,    space_td,  md.rgui,    md.ralt,    md.rctl                 #31-38
     ] @ combos,
     [ # layer 1
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.KP_PLUS,kc.KP_MINUS,kc.KP_ASTERISK,kc.KP_SLASH,kc.EQUAL,XXXX,
@@ -113,6 +112,12 @@ virtual_keys = virtual_keys',
    [ # layer 2
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.LEFT & tm.lalt,kc.UP,kc.RIGHT & tm.lalt,   XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    kc.LEFT, kc.DOWN, kc.RIGHT, TTTT,
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
+      XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
+    ] @ combos,
+   1[ # layer 3 #Symbols
+      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX, XXXX,
+      XXXX,    XXXX,    XXXX,    cu.EXLM,    XXXX,    XXXX,    cu.QUES,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
