@@ -25,8 +25,8 @@ let cu = {
   SCSH = tm.lctl & kc.E, # Screenshot
   LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
-  cmdh = kc.H & tm.lgui, # Macro for HHHH
-  HHHH = kc.H & hold.reg.cu.cmdh & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
+ # cmdh = kc.H & tm.lgui, # Macro for HHHH
+ # HHHH = kc.H & hold.reg.cu.cmdh & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
   BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 300},
   } in
 
@@ -71,11 +71,15 @@ let virtual_key_count = std.array.length virtual_keys' in
 let key_count = 39 + virtual_key_count in
 let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
 
-# Tapdance for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
+# --- Tapdance --- for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
   let play_td = td.make 200 [
     me.PLAY,
     me.NEXT,
     me.PREV,
+  ] in
+  
+  let hhhh_td = td.make 140 [
+    tap.reg.kc.H & hold.reg.mod.lgui & hold.reg.kc.H,
   ] in
 
   # The following keycode is a hold-tap, since it has a tap and a hold portion
