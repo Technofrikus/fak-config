@@ -94,7 +94,7 @@ virtual_keys = virtual_keys',
   layers = [
     [ # layer 0
       kc.Q,    kc.W,    kc.E,    kc.R,    kc.T,    kc.Y,    kc.U,    kc.I,    kc.O,    kc.P,   XXXX,            #0-10
-      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    HHHH,    kc.J,    kc.K,    kc.L,    kc.BAE,                  #11-20
+      kc.A,    kc.S,    kc.D,    kc.F,    kc.G,    cu.HHHH,    kc.J,    kc.K,    kc.L,    kc.BAE,                  #11-20
       cu.LSTZ,    kc.X,    kc.C,    kc.V,    kc.B,    kc.N,    kc.M,    kc.",",  kc.".",  cu.RST-,              #21-30
       md.lctl,    md.lalt,    md.lgui,    hold.reg.layer2,    space_td,  md.rgui,    md.ralt,    md.rctl                 #31-38
     ] @ combos,
