@@ -26,7 +26,7 @@ let cu = {
   LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
   HHHH = kc.H & md.lgui & kc.H & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
-  BAE = kc.ENT & md 2 & hold.reg.behavior{timeout_ms = 300},
+  BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 300},
   } in
 
 # --- Combos ---
