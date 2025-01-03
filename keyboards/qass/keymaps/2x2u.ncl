@@ -29,7 +29,7 @@ let cu = {
  # HHHH = kc.H & hold.reg.cu.cmdh & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
   BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 300},
   QUES = tm.lsft & kc.N1, # ?
-  EXLM = tm.lsft & kn.MINS, # !
+  EXLM = tm.lsft & kc.MINS, # !
   } in
 
 # --- Combos ---
