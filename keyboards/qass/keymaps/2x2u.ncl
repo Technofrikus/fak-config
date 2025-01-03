@@ -25,7 +25,7 @@ let cu = {
   SCSH = tm.lctl & kc.E, # Screenshot
   LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
-  HHHH = kc.H & md.lgui & hold.reg.kc.H & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
+  HHHH = kc.H & hold.reg.mod.lgui & kc.H & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
   } in
 
 # --- Combos ---
