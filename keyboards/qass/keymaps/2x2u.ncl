@@ -78,7 +78,7 @@ let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
     me.PREV,
   ] in
   
-  let hhhh_td = td.make 140 [
+  let HHHH_td = td.make 140 [
     tap.reg.kc.H & hold.reg.mod.lgui & hold.reg.kc.H, #not sure this will work
   ] in
 
