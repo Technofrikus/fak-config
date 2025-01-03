@@ -79,7 +79,7 @@ let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
   ] in
   
   let hhhh_td = td.make 140 [
-    tap.reg.kc.H & hold.reg.mod.lgui & hold.reg.kc.H,
+    tap.reg.kc.H & hold.reg.mod.lgui & hold.reg.kc.H, #not sure this will work
   ] in
 
   # The following keycode is a hold-tap, since it has a tap and a hold portion
