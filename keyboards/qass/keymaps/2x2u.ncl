@@ -115,7 +115,7 @@ virtual_keys = virtual_keys',
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
-   1[ # layer 3 #Symbols
+   [ # layer 3 #Symbols
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX, XXXX,
       XXXX,    XXXX,    XXXX,    cu.EXLM,    XXXX,    XXXX,    cu.QUES,    XXXX,    XXXX,    XXXX,
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
