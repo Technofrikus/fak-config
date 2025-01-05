@@ -1,4 +1,5 @@
-let { tap, hold, td, combo, .. } = import "fak/keycode.ncl" in
+# let { tap, hold, td, combo, .. } = import "fak/keycode.ncl" in
+let { tap, hold, td, combo, macro, ..} = import "fak/keycode.ncl" in
 
 # --This Keymap is targeted at macOS---
 
