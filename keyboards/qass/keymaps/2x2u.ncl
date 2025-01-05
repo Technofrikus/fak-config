@@ -32,19 +32,19 @@ let cu = {
   EXLM = tm.lsft & kc.MINS, # !
   # ---Macro---
   # fine grane volume up Mac
-  let SVOLU = macro.make [
+  SVOLU = macro.make [
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLU,
     macro.release md.lctl,
-    ] in
+    ]
   # fine grane volume down Mac
-  let SVOLD = macro.make [
+  SVOLD = macro.make [
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLD,
     macro.release md.lctl,
-    ] in
+    ]
   } in
 
 # --- Combos ---
