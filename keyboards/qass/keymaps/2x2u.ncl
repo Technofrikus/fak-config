@@ -20,14 +20,14 @@ let cu = {
   PSTE = tm.lgui & kc.V,
   CUT =  tm.lgui & kc.X,
   CLOS = tm.lgui & kc.Q,
-  VOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
-  VOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
+  SVOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
+  SVOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tm.lctl & kc.E, # Screenshot
-  LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 300}, # Left shift hold + Z
-  RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 300}, # Right shift hold + slash
+  LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 140}, # Left shift hold + Z
+  RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 140}, # Right shift hold + slash
  # cmdh = kc.H & tm.lgui, # Macro for HHHH
  # HHHH = kc.H & hold.reg.cu.cmdh & hold.reg.behavior{timeout_ms = 300}, # H, Cmd+H when held
-  BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 300},
+  BAE = kc.ENT & MO 2 & hold.reg.behavior{timeout_ms = 180},
   QUES = tm.lsft & kc.N1, # ?
   EXLM = tm.lsft & kc.MINS, # !
   } in
