@@ -37,14 +37,14 @@ let cu = {
     macro.press md.lsft,
     macro.tap me.VOLU,
     macro.release md.lctl,
-    ]
+    ],
   # fine grane volume down Mac
   SVOLD = macro.make [
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLD,
     macro.release md.lctl,
-    ]
+    ],
   } in
 
 # --- Combos ---
