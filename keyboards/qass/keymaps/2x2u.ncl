@@ -24,7 +24,7 @@ let SVOLU = macro.make [
 ] in
 
 # fine grane volume down Mac
-let SVOLU = macro.make [
+let SVOLD = macro.make [
   macro.press md.lalt,
   macro.press md.lsft,
   macro.tap me.VOLD,
