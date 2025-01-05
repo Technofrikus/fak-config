@@ -13,6 +13,24 @@ let BOOT = tap.custom.fak.BOOT in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
 
+# ---Macro---
+
+# fine grane volume up Mac
+let SVOLU = macro.make [
+  macro.press md.lalt,
+  macro.press md.lsft,
+  macro.tap me.VOLU,
+  macro.release md.lctl,
+] in
+
+# fine grane volume down Mac
+let SVOLU = macro.make [
+  macro.press md.lalt,
+  macro.press md.lsft,
+  macro.tap me.VOLD,
+  macro.release md.lctl,
+] in
+
 # "cu" for custom keys. This is just a name, so it can be whatever you want.
 let cu = {
   # Again, these are just names. They don't have to be 4-letter or capitalized.
@@ -20,8 +38,8 @@ let cu = {
   PSTE = tm.lgui & kc.V,
   CUT =  tm.lgui & kc.X,
   CLOS = tm.lgui & kc.Q,
-  SVOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
-  SVOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
+ # SVOLU = tm.lalt & tm.lsft & me.VOLU, #fine grain volume for macOS
+ # SVOLD = tm.lalt & tm.lsft & me.VOLD, #fine grain volume for macOS
   SCSH = tm.lctl & kc.E, # Screenshot
   LSTZ = md.lsft & kc.Z & hold.reg.behavior{timeout_ms = 140}, # Left shift hold + Z
   RST- = md.rsft & kc.SLSH & hold.reg.behavior{timeout_ms = 140}, # Right shift hold + slash
