@@ -107,7 +107,7 @@ virtual_keys = virtual_keys',
       XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.KP_PLUS,kc.KP_MINUS,kc.KP_ASTERISK,kc.KP_SLASH,kc.EQUAL,XXXX,
       kc.N1,  kc.N2,   kc.N3,   kc.N4,   kc.N5,   kc.N6,    kc.N7,   kc.N8,   kc.N9,   kc.N0,
       TTTT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
-      XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    play_td,    cu.VOLD,    cu.VOLU,
+      XXXX,    XXXX,    XXXX,    XXXX,    TTTT,    play_td,    cu.SVOLD,    cu.SVOLU,
     ] @ combos,
    [ # layer 2
       BOOT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,kc.LEFT & tm.lalt,kc.UP,kc.RIGHT & tm.lalt,   XXXX,    XXXX,
