@@ -1,4 +1,5 @@
-let { tap, hold, .. } = import "fak/keycode.ncl" in
+# let { tap, hold, .. } = import "fak/keycode.ncl" in
+let { tap, hold, td, combo, macro, ..} = import "fak/keycode.ncl" in
 
 let kc = tap.reg.kc in
 let md = tap.reg.mod in
