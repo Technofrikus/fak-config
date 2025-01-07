@@ -37,7 +37,7 @@ let cu = {
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLU,
-    macro.release md.lsft disc,
+    macro.release md.lsft,
     macro.release md.lalt,
     ],
   # fine grane volume down Mac
