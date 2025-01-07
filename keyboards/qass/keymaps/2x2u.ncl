@@ -38,6 +38,7 @@ let cu = {
     macro.press md.lsft,
     macro.tap me.VOLU,
     macro.release md.lctl,
+    macro.release md.lalt,
     ],
   # fine grane volume down Mac
   SVOLD = macro.make [
@@ -45,6 +46,7 @@ let cu = {
     macro.press md.lsft,
     macro.tap me.VOLD,
     macro.release md.lctl,
+    macro.release md.lalt,
     ],
   } in
 
@@ -57,6 +59,7 @@ let cu = {
   combo.make 35 [17, 18, 19],   # Backspace word
   combo.make 35 [18, 19],       # Delete
   combo.make 35 [0, 1],         # TAB
+  combo.make 35 [0, 1, 2],      # Quit APP
   combo.make 35 [11, 12],       # ESC
   combo.make 35 [21, 22],       # Cut
   combo.make 35 [22, 23],       # Copy
@@ -69,6 +72,7 @@ let combos = [
       tm.lalt & kc.BSPC, #JKL - not yet working in FAK
       kc.DEL,  #KL
       kc.TAB,  #QW
+      tm.lalt & kc.Q, #QWE
       kc.ESC,  #AS
       cu.CUT,  #YX
       cu.COPY, #XC
@@ -90,6 +94,12 @@ let key_count = 39 + virtual_key_count in
 let virtual_interrupts = std.array.replicate virtual_key_count ki.hr in
 
 # --- Tapdance --- for media: 1 tap = play/pause. 2 taps = next track. 3 taps = prev track.
+  let play_td = td.make 200 [
+    me.PLAY,
+    me.NEXT,
+    me.PREV,
+  ] in
+  
   let play_td = td.make 200 [
     me.PLAY,
     me.NEXT,
@@ -132,10 +142,10 @@ virtual_keys = virtual_keys',
       XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
     ] @ combos,
    [ # layer 3 #Symbols
-      XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX, XXXX,
-      XXXX,    XXXX,    XXXX,    cu.QUES,    XXXX,    XXXX,    cu.EXLM,    XXXX,    XXXX,    XXXX,
-      TTTT,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,    XXXX,
-      XXXX,    XXXX,    XXXX,    TTTT,    XXXX,    XXXX,    XXXX,    XXXX,
+      TTTT,    TTTT,    TTTT,    TTTT,    TTTT,    TTTT,    kc.LBRC,    TTTT,    kc.SCLN,    TTTT,    TTTT,
+      kc.QUOT,    kc.MINS,    TTTT,    cu.QUES, TTTT,    TTTT, cu.EXLM,    TTTT,    TTTT,    TTTT,
+      TTTT,    TTTT,    TTTT,    TTTT,    TTTT, TTTT,    TTTT,    TTTT,    TTTT, TTTT,
+      TTTT,    TTTT,    TTTT,    TTTT,    TTTT,    TTTT,    TTTT,    TTTT,
     ] @ combos,
   ],
 }
