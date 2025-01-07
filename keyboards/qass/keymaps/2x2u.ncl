@@ -37,7 +37,7 @@ let cu = {
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLU,
-    macro.release md.lctl,
+    macro.release md.lsft disc,
     macro.release md.lalt,
     ],
   # fine grane volume down Mac
@@ -45,7 +45,7 @@ let cu = {
     macro.press md.lalt,
     macro.press md.lsft,
     macro.tap me.VOLD,
-    macro.release md.lctl,
+    macro.release md.lsft,
     macro.release md.lalt,
     ],
   } in
@@ -59,7 +59,7 @@ let cu = {
   combo.make 35 [17, 18, 19],   # Backspace word
   combo.make 35 [18, 19],       # Delete
   combo.make 35 [0, 1],         # TAB
-  combo.make 35 [0, 1, 2],      # Quit APP
+  combo.make 35 [0, 1, 2],      # Quit APP - not working
   combo.make 35 [11, 12],       # ESC
   combo.make 35 [21, 22],       # Cut
   combo.make 35 [22, 23],       # Copy
