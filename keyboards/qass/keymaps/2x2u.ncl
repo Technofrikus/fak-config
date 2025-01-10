@@ -46,7 +46,9 @@ let cu = {
   SVOLD = macro.make [
     macro.press md.lalt,
     macro.press md.lsft,
-    macro.tap me.VOLD,
+    macro.press me.VOLD,
+    macro.pause_for_release,
+    macro.release me.VOLD,
     macro.release md.lsft,
     macro.release md.lalt,
     ],
