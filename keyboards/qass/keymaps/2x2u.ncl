@@ -36,8 +36,10 @@ let cu = {
   SVOLU = macro.make [
     macro.press md.lalt,
     macro.press md.lsft,
-    macro.tap me.VOLU,
-    macro.release md.lsft,
+    macro.press me.VOLU,
+    macro.pause_for_release,
+    macro.release me.VOLU
+    macro.release md.lsft rem,
     macro.release md.lalt,
     ],
   # fine grane volume down Mac
@@ -49,6 +51,8 @@ let cu = {
     macro.release md.lalt,
     ],
   } in
+  
+  
 
 # --- Combos ---
 # Key position for the combos
