@@ -38,7 +38,7 @@ let cu = {
     macro.press md.lsft,
     macro.press me.VOLU,
     macro.pause_for_release,
-    macro.release me.VOLU
+    macro.release me.VOLU,
     macro.release md.lsft,
     macro.release md.lalt,
     ],
